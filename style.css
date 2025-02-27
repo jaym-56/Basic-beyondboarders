@@ -120,7 +120,8 @@ img {
 .header {
   position: fixed;
   width: 100%;
-  background: ;box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background: var(--light);
+   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
 }
 .header .header_wrapper {
@@ -129,7 +130,6 @@ img {
   justify-content: space-between;
 }
 .header .header_nav ul {
-
   display: flex;
   gap: 5rem;
 }
@@ -154,11 +154,11 @@ border-radius: 5rem;
 transition:0.5s ease;
 }
 .toggle_menu span:nth-child(2){
-margin: 0.5rem 0;
+margin: 0.5rem ;
 width: 2.5rem;
 }
 .toggle_menu span:last-child{
-width: 1.8rem8
+width: 1.8rem8;
 }
 .toggle_menu.open span:first-child{
 width:1.8rem;
@@ -191,8 +191,9 @@ right: 0rem;
   padding-top: 10rem;
   }
   .header .header_nav ul li a {
+    color: var(--light);
+  }
 
-}
   .header .header_wrapper .sign{
     display: none;
 }
@@ -200,7 +201,40 @@ right: 0rem;
   display: block;
 }
 }
+/* BANNER */
+.banner{
+padding-top: 13rem;
+paddding-bottom: 5rem;
+background: var(--light);
+}
+.banner .banner_wrapper {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 10rem;
+}
 
+.banner .banner_img{
+display: flex;
+gap: 3rem;
+align-items: center;
+}
+.banner .banner_text h1{
+font-size: 6rem;
+font-weight: 800;
+color: var(--primary);
+}
+.banner .banner_text h1 span{
+  color: var(--accent);
+}
+.banner .banner_text p{
+margin: 3rem 0;
+}
+.banner .banner_text::after{
+  content: url("/img/airplane.png")
+  position: absolute;
+  bottom: -18rem;
+  right: 0rem;
+}
 /* REPEATABLE PATTERNS */
 :root{
     --primary: #004225;
@@ -213,7 +247,7 @@ padding:1.5rem 2rem;
 border-radius: 1rem;
 border: 1px solid transparent;
 font-size: 1.5rem;
-display; inline-block;
+display: inline-block;
 
 }
 .btn.bg-primary{
@@ -224,4 +258,4 @@ color: var(--light);
     background: var(--light);
     color: var(--primary);
     border: 1px solid var(--primary);
-
+}
